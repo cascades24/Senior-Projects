@@ -72,9 +72,13 @@ end
    histogram(err(:,1))
    grid on 
    xlabel('Beacon x-location error')
+   xlim([-20,20]);
+   ylim([0,500]);
    subplot(1,2,2)
    histogram(err(:,2))
    grid on
+   xlim([-20,20]);
+   ylim([0,500]);
    xlabel('Beacon y-location error')
 
 %% Trying again, with sample averaging 
