@@ -3,7 +3,7 @@
 %(Not using any range measurments)
 % 
 % Created: Jarrod Puseman 10/6/2019
-% Modified: Anastasia Muszynski 10/7/2019
+% Modified: Anastasia Muszynski 10/12/2019
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,8 +12,8 @@ clear; clc; close all;
 
 %% Set Up Antennas and Beacon (Coordinates)
 %For Drawing, see page 27 in Jarrod's notebook
-d12 = .06; %m
-d13 = .06; %m
+d12 = 0.061225; %m
+d13 = 0.061225; %m
 beta1 = 90; %degrees
 
 beeRange = 100; %m
@@ -23,6 +23,7 @@ A1 = [0 0];
 A2 = [d12 0];
 A3 = [d13*cosd(beta1) d13*sind(beta1)];
 
+% Plotting Test case
  figure
     hold on
     plot(A1(1), A1(2) ,'*','MarkerSize',8);
@@ -35,89 +36,61 @@ A3 = [d13*cosd(beta1) d13*sind(beta1)];
     grid on 
     title('Beacon and Reciever Locations');
     
-%% Test all Theta values
+%% Test all Theta values (make sure we are calculating all of them correctly)
 thetavec = linspace(0,359, 360);
 for i = 1:length(thetavec)
     Bee = [beeRange*cosd(thetavec(i)) beeRange*sind(thetavec(i))];
-    alpha(i) = test2D(d12, d13, beta1, Bee, 0);
+    theta(i) = test2D(d12, d13, beta1, Bee, 0);
 end
-% figure()
-% hold on
-% plot(thetavec, alpha, 'bo')
-% xlabel('Beacon Heading Angle (degrees)')
-% ylabel('Beacon Heading Calculated Angle (degrees)')
-% grid on 
+figure()
+hold on
+plot(thetavec, theta, 'bo')
+xlabel('Beacon Heading Angle (degrees)')
+ylabel('Beacon Heading Calculated Angle (degrees)')
+grid on 
+hold off
 
 %% Alright, Now Monte Carlo
-N = 5000; %Number of points
-alpha = zeros(N,1); 
+N = 500; %Number of points
+theta = zeros(N,1); 
 Bee = [beeRange*cosd(beeAngle) beeRange*sind(beeAngle)];
 for i = 1:N
-    alpha(i) = test2D(d12, d13, beta1, Bee, 1);
+    theta(i) = test2D(d12, d13, beta1, Bee, 1);
 end 
- figure
-   histogram((alpha-beeAngle))
-   grid on 
-   xlabel('Beacon Heading Angle Error (degrees)')
-   title({'Beacon Position Error for Normally Distributed Phase Angle Errors of 0.3 radians',...
-       ' for Antenna Separation of 6 cm, Range of 100m, Heading Angle of 200 degrees'})
-   fprintf('Mean: %d   Standard deviation: %d \n', mean(alpha-beeAngle), std(alpha-beeAngle))
-   
-   
-  err = [beeRange*cosd(alpha), beeRange*sind(alpha)]-Bee;
-     figure
-    sgtitle({'Beacon Position Error for Normally Distributed Phase Angle Errors of 0.3 radians',...
-       ' for Antenna Separation of 6 cm, Range of 100m, Heading Angle of 200 degrees'})
-   subplot(1,2,1)
-   histogram(err(:,1))
-   grid on 
-   xlabel('Beacon x-location error')
-   xlim([-20,20]);
-   ylim([0,500]);
-   subplot(1,2,2)
-   histogram(err(:,2))
-   grid on
-   xlim([-20,20]);
-   ylim([0,500]);
-   xlabel('Beacon y-location error')
-
+ 
+% generate Histogram of angles, scatter plot of computed positions, and
+% scatterplot of range error, print mean and standard deviation info
+fprintf('No Averaging\n')
+ MakePlots(theta,Bee, beeAngle, beeRange)
+ 
 %% Trying again, with sample averaging 
 n = 10; % samples to average 
-alpha = zeros(N,n);
+theta = zeros(N,n);
 for i = 1:N
     for j = 1:n
-        alpha(i,j) = test2D(d12, d13, beta1, Bee, 1);
+        theta(i,j) = test2D(d12, d13, beta1, Bee, 1);
     end 
 end 
-alpha = mean(alpha,2);
- figure
-   histogram((alpha-beeAngle))
-   grid on 
-   xlabel('Beacon Heading Angle Error (degrees)')
-   title({'Beacon Position Error for Normally Distributed Phase Angle Errors of 0.3 radians',...
-       ' for Antenna Separation of 6 cm, Range of 100m, Heading Angle of 200 degrees',...
-       'Averaging 10 Samples'})   
-   fprintf('Averaging 10 Samples: Mean: %d   Standard deviation: %d \n', mean(alpha-beeAngle), std(alpha-beeAngle))
-
-   %% Trying again, with sample averaging 
+theta = mean(theta,2);
+ % generate Histogram of angles, scatter plot of computed positions, and
+% scatterplot of range error
+fprintf('Averaging 10 pts\n')
+ MakePlots(theta, Bee,beeAngle, beeRange)
+ 
+   %% Trying again, with more sample averaging 
 n = 30; % samples to average 
-alpha = zeros(N,n);
+theta = zeros(N,n);
 for i = 1:N
     for j = 1:n
-        alpha(i,j) = test2D(d12, d13, beta1, Bee, 1);
+        theta(i,j) = test2D(d12, d13, beta1, Bee, 1);
     end 
 end 
-alpha = mean(alpha,2);
- figure
-   histogram((alpha-beeAngle))
-   grid on 
-   xlabel('Beacon Heading Angle Error (degrees)')
-      title({'Beacon Position Error for Normally Distributed Phase Angle Errors of 0.3 radians',...
-       ' for Antenna Separation of 6 cm, Range of 100m, Heading Angle of 200 degrees',...
-       'Averaging 30 Samples'})      
-   fprintf('Averaging 30 Samples: Mean: %d   Standard deviation: %d \n', mean(alpha-beeAngle), std(alpha-beeAngle))
-
-
+theta = mean(theta,2);
+ % generate Histogram of angles, scatter plot of computed positions, and
+% scatterplot of range error
+fprintf('Averaging 30 pts\n')
+ MakePlots(theta,Bee, beeAngle, beeRange)
+   
 %% Function
 function [alpha] = test2D(d12, d13, beta1, Bee, useError)
     
@@ -150,4 +123,51 @@ function [alpha] = test2D(d12, d13, beta1, Bee, useError)
     if alpha <0 
       alpha = 360+alpha; 
     end 
+end
+
+
+function []= MakePlots(theta,Bee, beeAngle, beeRange) 
+figure
+   histogram((theta-beeAngle),'FaceColor', [0, 0, 1], 'EdgeColor','k')
+   grid on 
+   xlabel('Beacon Heading Angle Error (degrees)')
+   title({'Beacon Heading Angle Error'})
+   fprintf('Mean: %d degrees  Standard deviation: %d degrees \n', mean(theta-beeAngle), std(theta-beeAngle))
+   % Find beacon location based upon heading
+    BeeCalc = [beeRange*cosd(theta), beeRange*sind(theta)];
+    % Calculate total distance error
+    err = zeros(length(BeeCalc), 1);
+    for i=1:length(BeeCalc)
+        err(i) = norm(Bee-BeeCalc(i,:));
+    end
+   % Calculating percent of cases within error bound of 2%
+   bound = .02*beeRange;
+   percent = length(find(err<bound))/length(err) * 100;
+
+   
+   figure
+   hold on 
+   %Scatter plot of locations
+   subplot(1,2,1)
+   hold on 
+   scatter(BeeCalc(:,1),BeeCalc(:,2),'k*')
+   scatter(Bee(1), Bee(2),'r*')
+   xlabel('X-Position (m)')
+   ylabel('Y-Position (m)')
+   grid on
+   legend('Computed Positions', 'Actual Beacon')
+   title('Computed Position')
+   hold off
+   
+   subplot(1,2,2)
+   %Histogram of errors'
+   hold on 
+   title('Error in Computation')
+   histogram(err,'FaceColor', [0, 0, 1], 'EdgeColor','k')
+   xlabel('Beacon Location error (m)')
+   hold off 
+   hold off
+   % Print Mean and standard deviation of errors, and percent acceptable
+   % cases
+   fprintf('Range Error: \n Mean: %d m, St.Dev: %d m\n Percent of errors within 2m, %d \n\n', mean(err), std(err), percent)
 end
