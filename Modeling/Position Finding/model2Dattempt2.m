@@ -3,7 +3,7 @@
 %(Not using any range measurments)
 % 
 % Created: Jarrod Puseman 10/6/2019
-% Modified: Anastasia Muszynski 10/12/2019
+% Modified: Anastasia Muszynski 10/13/2019
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -40,7 +40,7 @@ A3 = [d13*cosd(beta1) d13*sind(beta1)];
 thetavec = linspace(0,359, 360);
 for i = 1:length(thetavec)
     Bee = [beeRange*cosd(thetavec(i)) beeRange*sind(thetavec(i))];
-    theta(i) = test2D(d12, d13, beta1, Bee, 0);
+    theta(i) = test2D(d12, d13, beta1, Bee, 0,0);
 end
 figure()
 hold on
@@ -53,54 +53,59 @@ hold off
 %% Alright, Now Monte Carlo
 N = 500; %Number of points
 theta = zeros(N,1); 
+BeeCalc = zeros(N,2); 
 Bee = [beeRange*cosd(beeAngle) beeRange*sind(beeAngle)];
 for i = 1:N
-    theta(i) = test2D(d12, d13, beta1, Bee, 1);
+   [theta(i), BeeCalc(i,:)]  = test2D(d12, d13, beta1, Bee, 0,1);
 end 
  
 % generate Histogram of angles, scatter plot of computed positions, and
 % scatterplot of range error, print mean and standard deviation info
 fprintf('No Averaging\n')
- MakePlots(theta,Bee, beeAngle, beeRange)
+ MakePlots(theta,BeeCalc, Bee, beeAngle, beeRange)
  
 %% Trying again, with sample averaging 
-n = 10; % samples to average 
+n = 20; % samples to average 
 theta = zeros(N,n);
+BeeCalc = zeros(N,n,2); 
 for i = 1:N
     for j = 1:n
-        theta(i,j) = test2D(d12, d13, beta1, Bee, 1);
+        [theta(i,j), BeeCalc(i,j,:)] = test2D(d12, d13, beta1, Bee, .08,2);
     end 
 end 
 theta = mean(theta,2);
+BeeCalc = mean(BeeCalc,2);
  % generate Histogram of angles, scatter plot of computed positions, and
 % scatterplot of range error
-fprintf('Averaging 10 pts\n')
- MakePlots(theta, Bee,beeAngle, beeRange)
+fprintf('Averaging %i pts\n',n)
+ MakePlots(theta, BeeCalc,Bee, beeAngle, beeRange)
  
    %% Trying again, with more sample averaging 
-n = 30; % samples to average 
+n = 50; % samples to average 
 theta = zeros(N,n);
+BeeCalc = zeros(N,n,2); 
 for i = 1:N
     for j = 1:n
-        theta(i,j) = test2D(d12, d13, beta1, Bee, 1);
+        [theta(i,j), BeeCalc(i,j,:)] = test2D(d12, d13, beta1, Bee, .13, 2);
     end 
 end 
 theta = mean(theta,2);
+BeeCalc = mean(BeeCalc,2);
  % generate Histogram of angles, scatter plot of computed positions, and
 % scatterplot of range error
-fprintf('Averaging 30 pts\n')
- MakePlots(theta,Bee, beeAngle, beeRange)
+fprintf('Averaging %i pts\n',n)
+ MakePlots(theta,BeeCalc, Bee, beeAngle, beeRange)
    
 %% Function
-function [alpha] = test2D(d12, d13, beta1, Bee, useError)
+function [theta, BeeCalc] = test2D(d12, d13, beta1, Bee, phaseErr, rangeErr)
     
     A1 = [0 0];
     A2 = [d12 0];
     A3 = [d13*cosd(beta1) d13*sind(beta1)];
 
-    sb1 = norm(abs(Bee-A1));
-    sb2 = norm(abs(Bee-A2));
-    sb3 = norm(abs(Bee-A3));
+    r1 = norm(abs(Bee-A1));
+    r2 = norm(abs(Bee-A2));
+    r3 = norm(abs(Bee-A3));
 
     %% Set Up RF Parameters
     f = 2.4e9; % Hz, frequency of sine wave
@@ -108,25 +113,27 @@ function [alpha] = test2D(d12, d13, beta1, Bee, useError)
     lambda = c/f; % m, wavelength
     dspec = lambda/(2*pi); % "specific distance"
     
-    r12 = sb1-sb2; % distance difference (m)
-    r13 = sb1-sb3; % distance difference (m)
+    r12 = r1-r2; % distance difference (m)
+    r13 = r1-r3; % distance difference (m)
 
-    phi12 = r12/dspec; % calculate phase difference 
-    phi13 = r13/dspec; % calculate phase difference 
+    % Note: error will only be applied if phaseErr is nonzero
+    phi12 = r12/dspec+normrnd(0,2)*phaseErr; % calculate phase difference 
+    phi13 = r13/dspec+normrnd(0,2)*phaseErr; % calculate phase difference 
     
-    if useError ==1 
-        phi12 = phi12+normrnd(0,2)*0.1;
-        phi13 = phi13+normrnd(0,2)*0.1;
+    
+    theta = atan2d(phi13*d12,(phi12*d13));
+    if theta <0 
+      theta = 360+theta; 
     end 
     
-    alpha = atan2d(phi13*d12,(phi12*d13));
-    if alpha <0 
-      alpha = 360+alpha; 
-    end 
+    % Note: error will only be applied if rangeErr is nonzero
+    r1 = r1+normrnd(0,2)*rangeErr;
+    BeeCalc = [r1*cosd(theta), r1*sind(theta)];
+    
 end
 
 
-function []= MakePlots(theta,Bee, beeAngle, beeRange) 
+function []= MakePlots(theta, BeeCalc, Bee, beeAngle, beeRange) 
 figure
    histogram((theta-beeAngle),'FaceColor', [0, 0, 1], 'EdgeColor','k')
    grid on 
@@ -134,7 +141,6 @@ figure
    title({'Beacon Heading Angle Error'})
    fprintf('Mean: %d degrees  Standard deviation: %d degrees \n', mean(theta-beeAngle), std(theta-beeAngle))
    % Find beacon location based upon heading
-    BeeCalc = [beeRange*cosd(theta), beeRange*sind(theta)];
     % Calculate total distance error
     err = zeros(length(BeeCalc), 1);
     for i=1:length(BeeCalc)
