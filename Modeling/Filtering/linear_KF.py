@@ -14,14 +14,14 @@ def main():
 	#x = dynamics['initial_state']
 	#t = dynamics['timestep']
 
-	a = np.loadtxt('myData.txt', delimiter=',') #x,y,z
+	a = np.loadtxt('motion.txt', delimiter=',') #x,y,z
 	t = np.loadtxt('timestamp.txt', delimiter=', ')
 	w_noise = np.random.rand(1,6)*0.1
 	m_noise = np.random.rand(1,6)*0.1
 	ts = t[1,0]
 	position = np.array(a[0,:]*ts*ts)
 	velocity = np.array(a[0,:]*ts)
-
+	#B = [0.1 , 0 , 0 , 0]
 	x = [0,0,0,0,0,0]
 	P = np.eye(6)*np.random.rand(1,1) #Initial uncertainty
 	A = np.array([[1, 0, 0, ts, 0, 0],
@@ -35,20 +35,22 @@ def main():
 
 	H = np.eye(6)
 
-	R = np.eye(6)*1 #noise 0.1 rad
+	R = np.eye(6)*100 #noise 0.1 rad
 
 	pose, P = kf(x,t,P,A,Q,H,R,a,w_noise,m_noise)
 
-	plt.title('data')
-	plt.plot(t[:,0],pose[:,0])
-	#plt.plot(t[:,0],P[:,0])
-	#plt.plot(t[:,0],pose[:,1])
-	#plt.plot(t[:,0],pose[:,2])
+
+	fig, axs = plt.subplots(2, 2)
+
+	axs[0,0].plot(t[:,0],pose[:,0], color='blue')
+	#plt.plot(t[:,0],P[:,0,0])
+	axs[0,1].plot(t[:,0],pose[:,1], color='blue')
+	axs[1,0].plot(t[:,0],pose[:,2], color='blue')
 
 
-	plt.plot(t[:,0],a[:,0])
-	#plt.plot(t[:,0],a[:,1]*timestep*timestep)
-	#plt.plot(t[:,0],a[:,2]*timestep*timestep)
+	axs[0,0].plot(t[:,0],a[:,0], color='green')
+	axs[0,1].plot(t[:,0],a[:,1], color='green')
+	axs[1,0].plot(t[:,0],a[:,2], color='green')
 
 	plt.xlabel('time (sec)')
 	plt.ylabel('m')
@@ -78,6 +80,11 @@ def kf(xp,t,Pp,A,Q,H,R,a, w,m):
 
 		z = [a[k+1,0],a[k+1,1],a[k+1,2],0,0,0]
 
+		#if k>2:
+		#	z[3] = abs(x[k,0]-x[k-1,0])/dt
+		#	z[4] = abs(x[k,1]-x[k-1,1])/dt
+		#	z[5] = abs(x[k,2]-x[k-1,2])/dt
+		#	print z[3]
 		x[k+1] = xkp + np.dot(K,(z-np.dot(H,xkp))) 
 
 		P[k+1] = np.dot((np.eye(6) - np.dot(K,H)),pkp)
