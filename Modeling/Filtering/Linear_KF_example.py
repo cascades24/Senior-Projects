@@ -68,6 +68,7 @@ def kf(a,g,m,t): #For the given problem we only really need to track rotation st
 		z = [gx[k]*timestep,gy[k]*timestep, gz[k]*timestep]
 
 		x[k+1] = xkp + np.dot(K,(z-np.dot(H,xkp)))
+		print x[k+1]
 
 		P = np.dot((np.eye(3) - np.dot(K,H)),pkp)
 		

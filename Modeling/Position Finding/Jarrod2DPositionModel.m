@@ -25,7 +25,7 @@ A3 = [d2*cos(beta1) d2*sin(beta1) 0];
 
 beaconRange = 100; %m
 beaconAngle = 200; %deg
-Beacon = [beaconRange*cosd(beaconAngle) beaconRange*sind(beaconAngle)];
+Beacon = [beaconRange*cosd(beaconAngle) beaconRange*sind(beaconAngle) 0];
 
 sb1 = norm(abs(Beacon-A1));
 sb2 = norm(abs(Beacon-A2));
