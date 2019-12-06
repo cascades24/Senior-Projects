@@ -118,13 +118,20 @@ def kf(xp,t,Pp,A,Q,H,R,a, w,m):
 		#Correct
 		K = np.dot(np.dot(pkp, np.transpose(H)), np.linalg.inv(np.dot(np.dot(H,pkp),np.transpose(H))+ R))
 
+
+		'''try:
+			Vx = (a[k+1][0] - a[k][0])/dt 
+			Vy = (a[k+1][1] - a[k][1])/dt 
+			Vz = (a[k+1][2] - a[k][2])/dt
+		except:
+			Vx = 0
+			Vy = 0
+			Vz = 0 
+		z = [a[k+1,0],a[k+1,1],a[k+1,2],Vx, Vy, Vz]'''
+
 		z = [a[k+1,0],a[k+1,1],a[k+1,2],0,0,0]
 
-		#if k>2:
-		#	z[3] = abs(x[k,0]-x[k-1,0])/dt
-		#	z[4] = abs(x[k,1]-x[k-1,1])/dt
-		#	z[5] = abs(x[k,2]-x[k-1,2])/dt
-		#	print z[3]
+
 		x[k+1] = xkp + np.dot(K,(z-np.dot(H,xkp))) 
 
 		P[k+1] = np.dot((np.eye(6) - np.dot(K,H)),pkp)
