@@ -1,0 +1,34 @@
+Removed Pin From Net: NetName=NetD7_1 Pin=J6-1
+Removed Pin From Net: NetName=NetD7_1 Pin=P3-2
+Change Component Comment : Designator=J1 Old Comment=RPi Power New Comment=692121330100
+Change Managed Component Library Link : Designator=J1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=80F4A3C8-BD5B-46D1-B7CA-AAF45BC4F587 New ItemGUID= Old RevisionGUID=C88EAE22-25B6-4389-8B0F-2033E123B3CF New RevisionGUID=
+Change component parameters: Designator = "J1" ("J1"); Footprint = "614104190121"; UniqueID = "\HFTWETUJ" ("\HFTWETUJ")
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "USB2.0TypeA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "30mOhm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet URL"; Value = "https://katalog.we-online.de/em/datasheet/614104190121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gender"; Value = "Receptacle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "614104190121"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55to85degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Horizontal"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "614104190121"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "614104190121"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Current"; Value = "1.5A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Working Voltage"; Value = "30VAC"; VariantName = "[No Variations]"
+Added Component: Designator=*(DCDC_Reg)
+Added Component: Designator=R9(RESC2013X50X30LL20T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW08050000Z0EA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetJ6_1 Pin=J6-1
+Added Pin To Net: NetName=NetJ6_1 Pin=P3-2
+Added Pin To Net: NetName=NetC1_1 Pin=R9-1
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component * DC/DC Converter
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component J1 692121330100
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component J5 692121330100
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component J6 614104190121
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R9 0 Ohm
+Added Room: Name=SeniorDesign_PowerBoard_Rev3

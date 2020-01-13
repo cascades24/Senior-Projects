@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=GND Pin=*-3
+Removed Pin From Net: NetName=GND Pin=*-8
+Removed Pin From Net: NetName=GND Pin=C1-1
+Removed Pin From Net: NetName=GND Pin=C2-1
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=GND Pin=P2-1
+Removed Pin From Net: NetName=NetD1_1 Pin=R1-1
+Removed Pin From Net: NetName=GND Pin=R9-1
+Change Managed Component Library Link : Designator=R1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=75AB9B3F-F298-47BF-8055-EF284B1256F4 New ItemGUID=860266FE-77B2-42E2-AC6A-E0909D853ABC Old RevisionGUID=264C3C1C-6C7A-40E9-B6E1-E37B9AA3BC1E New RevisionGUID=1F3A72EF-5ED3-49C5-9F2A-4F49C5C380D1
+Change component parameters: Designator = "R1" ("R1"); Footprint = "RESC3216X70X50LL05T20"; UniqueID = "\NHGLIENG" ("\NHGLIENG")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "ERJ-8ENF1501V"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=V_Out New Net Name=NetC2_2
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=C2-1
+Added Pin To Net: NetName=NetC1_1 Pin=C3-1
+Added Pin To Net: NetName=NetC1_1 Pin=P2-1
+Added Pin To Net: NetName=NetC1_1 Pin=R9-1
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=R1-1
+Added Pin To Net: NetName=NetC1_2 Pin=S1-2
+Added Net: Name=NetC1_2
