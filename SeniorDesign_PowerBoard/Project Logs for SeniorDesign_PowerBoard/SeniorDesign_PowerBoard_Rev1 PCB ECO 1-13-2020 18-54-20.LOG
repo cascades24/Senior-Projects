@@ -1,0 +1,207 @@
+Removed Pin From Net: NetName=NetF2_1 Pin=F3-1
+Removed Pin From Net: NetName=NetF2_1 Pin=F4-1
+Removed Pin From Net: NetName=NetF1_1 Pin=P2-2
+Removed Pin From Net: NetName=NetF2_1 Pin=R2-1
+Removed Pin From Net: NetName=NetC2_2 Pin=R2-2
+Removed Pin From Net: NetName=NetF1_2 Pin=S1-1
+Removed Pin From Net: NetName=Net1k5 Ohm_2 Pin=S1-2
+Removed Pin From Net: NetName=NetJ1_1 Pin=S2-2
+Removed Pin From Net: NetName=NetF3_2 Pin=S3-1
+Removed Pin From Net: NetName=NetJ2_1 Pin=S3-2
+Removed Pin From Net: NetName=NetJ4_1 Pin=S4-2
+Removed Pin From Net: NetName=NetJ6_1 Pin=S5-1
+Removed Pin From Net: NetName=NetF2_1 Pin=S5-2
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=R9
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=S1
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=S2
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=S3
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=S4
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=S5
+Change Component Footprint: Designator=F1 Old Footprint=PIN-W2/E2.8 New Footprint=LFUS-263-2_V1
+Change Component Footprint: Designator=F2 Old Footprint=PIN-W2/E2.8 New Footprint=LFUS-263-2_V1
+Change Component Footprint: Designator=F3 Old Footprint=PIN-W2/E2.8 New Footprint=LFUS-263-2_V1
+Change Component Footprint: Designator=F4 Old Footprint=PIN-W2/E2.8 New Footprint=LFUS-263-2_V1
+Change Component Comment : Designator=F1 Old Comment=Fuse 1 New Comment=0263.500WRT1L
+Change Component Comment : Designator=F2 Old Comment=Fuse 1 New Comment=0263.500WRT1L
+Change Component Comment : Designator=F3 Old Comment=Fuse 1 New Comment=0263.500WRT1L
+Change Component Comment : Designator=F4 Old Comment=Fuse 1 New Comment=0263.500WRT1L
+Change Component Designator: OldDesignator=1k5 Ohm NewDesignator=R5
+Change Component Designator: OldDesignator=C1 NewDesignator=C3
+Change Component Designator: OldDesignator=C3 NewDesignator=C1
+Change Component Designator: OldDesignator=D1 NewDesignator=D4
+Change Component Designator: OldDesignator=D2 NewDesignator=D1
+Change Component Designator: OldDesignator=D3 NewDesignator=D2
+Change Component Designator: OldDesignator=D4 NewDesignator=D3
+Change Component Designator: OldDesignator=D6 NewDesignator=D7
+Change Component Designator: OldDesignator=D7 NewDesignator=D6
+Change Component Designator: OldDesignator=J5 NewDesignator=J6
+Change Component Designator: OldDesignator=J6 NewDesignator=J5
+Change Component Designator: OldDesignator=P2 NewDesignator=P1
+Change Component Designator: OldDesignator=P3 NewDesignator=P2
+Change Component Designator: OldDesignator=R3 NewDesignator=R2
+Change Component Designator: OldDesignator=R5 NewDesignator=R6
+Change Component Designator: OldDesignator=R6 NewDesignator=R7
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R9 NewDesignator=R3
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Managed Component Library Link : Designator=F1 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=92592DA1-8D23-4470-ACCF-1D73C4065C5E Old RevisionGUID= New RevisionGUID=F2815939-4157-4011-8483-59DE60BA0448
+Change Managed Component Library Link : Designator=F2 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=92592DA1-8D23-4470-ACCF-1D73C4065C5E Old RevisionGUID= New RevisionGUID=F2815939-4157-4011-8483-59DE60BA0448
+Change Managed Component Library Link : Designator=F3 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=92592DA1-8D23-4470-ACCF-1D73C4065C5E Old RevisionGUID= New RevisionGUID=F2815939-4157-4011-8483-59DE60BA0448
+Change Managed Component Library Link : Designator=F4 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=92592DA1-8D23-4470-ACCF-1D73C4065C5E Old RevisionGUID= New RevisionGUID=F2815939-4157-4011-8483-59DE60BA0448
+Change component parameters: Designator = "F1" ("F1"); Footprint = "PIN-W2/E2.8"; UniqueID = "\VWKEMINU" ("\VWKEMINU")
+Change component parameters (AddParameter): Name = "Ampere Rating"; Value = "0.5 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.littelfuse.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_263_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Dec-13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Littelfuse"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Voltage Drop"; Value = "0.302 mV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "2-Pin Axial Lead, Dia 3.94 mm, Body Length 7.11 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "263-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "0263.500WRT1L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temp. Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Typical Cold Resistance"; Value = "0.332 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "250 V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2" ("F2"); Footprint = "PIN-W2/E2.8"; UniqueID = "\GBNVFFZJ" ("\GBNVFFZJ")
+Change component parameters (AddParameter): Name = "Ampere Rating"; Value = "0.5 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.littelfuse.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_263_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Dec-13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Littelfuse"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Voltage Drop"; Value = "0.302 mV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "2-Pin Axial Lead, Dia 3.94 mm, Body Length 7.11 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "263-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "0263.500WRT1L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temp. Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Typical Cold Resistance"; Value = "0.332 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "250 V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F3" ("F3"); Footprint = "PIN-W2/E2.8"; UniqueID = "\MMPIPGYM" ("\MMPIPGYM")
+Change component parameters (AddParameter): Name = "Ampere Rating"; Value = "0.5 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.littelfuse.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_263_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Dec-13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Littelfuse"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Voltage Drop"; Value = "0.302 mV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "2-Pin Axial Lead, Dia 3.94 mm, Body Length 7.11 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "263-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "0263.500WRT1L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temp. Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Typical Cold Resistance"; Value = "0.332 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "250 V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F4" ("F4"); Footprint = "PIN-W2/E2.8"; UniqueID = "\VTDFZVUT" ("\VTDFZVUT")
+Change component parameters (AddParameter): Name = "Ampere Rating"; Value = "0.5 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.littelfuse.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_263_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Dec-13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Littelfuse"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Voltage Drop"; Value = "0.302 mV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "2-Pin Axial Lead, Dia 3.94 mm, Body Length 7.11 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "263-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "0263.500WRT1L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temp. Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Typical Cold Resistance"; Value = "0.332 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "250 V"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC1005X40X25ML05T05)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW04020000Z0ED"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW3(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW4(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW5(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetF1_2 Pin=F2-2
+Added Pin To Net: NetName=NetF1_2 Pin=F4-2
+Added Pin To Net: NetName=NetC2_2 Pin=R1-1
+Added Pin To Net: NetName=NetF1_2 Pin=R1-2
+Added Pin To Net: NetName=NetF1_1 Pin=SW1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=SW1-2
+Added Pin To Net: NetName=NetF2_1 Pin=SW2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=SW2-2
+Added Pin To Net: NetName=NetF3_2 Pin=SW3-1
+Added Pin To Net: NetName=Net1k5 Ohm_2 Pin=SW3-2
+Added Pin To Net: NetName=NetJ4_1 Pin=SW4-2
+Added Pin To Net: NetName=NetF1_2 Pin=SW5-1
+Added Pin To Net: NetName=NetJ6_1 Pin=SW5-2
+Change Net Name : Old Net Name=Net1k5 Ohm_1 New Net Name=NetD4_1
+Change Net Name : Old Net Name=Net1k5 Ohm_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetC2_2 New Net Name=5V
+Change Net Name : Old Net Name=NetD2_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetD3_1 New Net Name=NetD2_1
+Change Net Name : Old Net Name=NetD4_1 New Net Name=NetD3_1
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD7_1
+Change Net Name : Old Net Name=NetD7_1 New Net Name=NetD6_1
+Change Net Name : Old Net Name=NetJ5_1 New Net Name=NetJ6_1
+Change Net Name : Old Net Name=NetJ6_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetR9_2 New Net Name=NetR3_2
+Added Pin To Net: NetName=NetF3_1 Pin=F3-1
+Added Pin To Net: NetName=NetF3_1 Pin=P1-2
+Added Net: Name=NetF3_1
+Added Pin To Net: NetName=NetF4_1 Pin=F4-1
+Added Pin To Net: NetName=NetF4_1 Pin=SW4-1
+Added Net: Name=NetF4_1
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R1 CRCW04020000Z0ED
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW1 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW2 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW3 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW4 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW5 418121160801
+Added Room: Name=SeniorDesign_PowerBoard_Rev3

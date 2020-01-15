@@ -1,0 +1,8 @@
+Change Net Name : Old Net Name=NetJ2_2 New Net Name=D_N
+Change Net Name : Old Net Name=NetJ2_3 New Net Name=D_P
+Change Net Name : Old Net Name=NetJ2_5 New Net Name=SSRX_N
+Change Net Name : Old Net Name=NetJ2_6 New Net Name=SSRX_P
+Change Net Name : Old Net Name=NetJ2_8 New Net Name=SSTX_N
+Change Net Name : Old Net Name=NetJ2_9 New Net Name=SSTX_P
+Added Room: Name=SeniorDesign_PowerBoard_Rev3
+Added Class: Name=USB_DIFF_PAIR
