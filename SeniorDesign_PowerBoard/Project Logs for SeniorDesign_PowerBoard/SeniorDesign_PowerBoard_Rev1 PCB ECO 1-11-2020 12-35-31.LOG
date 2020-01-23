@@ -1,0 +1,19 @@
+Change Component Footprint: Designator=J1 Old Footprint=62900416021 New Footprint=614104190121
+Change Component Comment : Designator=J1 Old Comment=62900416021 New Comment=614104190121
+Change Managed Component Library Link : Designator=J1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=BD6E8E7E-15DD-44A4-9462-B3E955DA6B62 New ItemGUID=80F4A3C8-BD5B-46D1-B7CA-AAF45BC4F587 Old RevisionGUID=8D3C7ED0-F2EB-4C21-8743-041B02396E1E New RevisionGUID=C88EAE22-25B6-4389-8B0F-2033E123B3CF
+Change component parameters: Designator = "J1" ("J1"); Footprint = "62900416021"; UniqueID = "\HSCKVJBR" ("\HSCKVJBR")
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "USB2.0TypeA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "30mOhm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet URL"; Value = "https://katalog.we-online.de/em/datasheet/614104190121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gender"; Value = "Receptacle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55to85degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Horizontal"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "614104190121"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "614104190121"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Current"; Value = "1.5A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Working Voltage"; Value = "30VAC"; VariantName = "[No Variations]"

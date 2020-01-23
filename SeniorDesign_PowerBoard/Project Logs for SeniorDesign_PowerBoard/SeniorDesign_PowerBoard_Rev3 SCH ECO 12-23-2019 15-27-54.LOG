@@ -1,0 +1,38 @@
+Replace Part * DC/DC Converter in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with DC/DC Converter from SeniorDesign_PowerBoard.SCHLIB
+Replace Part B1 Battery in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with Battery from Miscellaneous Devices.IntLib
+Update Managed Component C1 From CMP-2000-05258-1[4.7 uF] To CMP-2000-05258-1[GRM31CR71H475KA12L] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component C2 From CMP-2000-06337-1[22 uF] To CMP-2000-06337-1[GRM188R61A226ME15D] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component C3 From CMP-2000-06337-1[22 uF] To CMP-2000-06337-1[GRM188R61A226ME15D] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D1 From CMP-2000-06426-1[HSMH-C150] To CMP-2000-06426-1[HSMH-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D2 From CMP-2000-06426-1[HSMH-C150] To CMP-2000-06426-1[HSMH-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D3 From CMP-2000-06426-1[HSMH-C150] To CMP-2000-06426-1[HSMH-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D4 From CMP-2000-05061-1[HSMG-C150] To CMP-2000-05061-1[HSMG-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D5 From CMP-2000-06426-1[HSMH-C150] To CMP-2000-06426-1[HSMH-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D6 From CMP-2000-05061-1[HSMG-C150] To CMP-2000-05061-1[HSMG-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component D7 From CMP-2000-06426-1[HSMH-C150] To CMP-2000-06426-1[HSMH-C150] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Replace Part F1 Fuse 1 in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with Fuse 1 from Miscellaneous Devices.IntLib
+Replace Part F2 Fuse 1 in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with Fuse 1 from Miscellaneous Devices.IntLib
+Replace Part F3 Fuse 1 in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with Fuse 1 from Miscellaneous Devices.IntLib
+Replace Part F4 Fuse 1 in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with Fuse 1 from Miscellaneous Devices.IntLib
+Update Managed Component J1 From CMP-1502-03219-1[692121330100] To CMP-1502-03219-1[692121330100] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component J2 From CMP-1502-03219-1[692121330100] To CMP-1502-03219-1[692121330100] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component J3 From CMP-1502-03219-1[692121330100] To CMP-1502-03219-1[692121330100] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component J4 From CMP-1502-03219-1[692121330100] To CMP-1502-03219-1[692121330100] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component J5 From CMP-1502-03219-1[692121330100] To CMP-1502-03219-1[692121330100] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component J6 From CMP-1502-03231-1[614104190121] To CMP-1502-03231-1[614104190121] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component P1 From CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] To CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component P2 From CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] To CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component P3 From CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] To CMP-1755-00004-1[S2B-PH-K-S(LF)(SN)] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R1 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R2 From CMP-2002-08214-1[0 (8) Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R3 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R4 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R5 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R6 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R7 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Update Managed Component R8 From CMP-2002-08214-1[150 Ohm] To CMP-2002-08214-1[CRCW0402150RFKED] in SeniorDesign_PowerBoard_Rev3.SchDoc
+Replace Part S1 SW-SPST in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with SW-SPST from Miscellaneous Devices.IntLib
+Replace Part S2 SW-SPST in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with SW-SPST from Miscellaneous Devices.IntLib
+Replace Part S3 SW-SPST in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with SW-SPST from Miscellaneous Devices.IntLib
+Replace Part S4 SW-SPST in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with SW-SPST from Miscellaneous Devices.IntLib
+Replace Part S5 SW-SPST in C:\Users\Public\Documents\Altium\Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev3.SchDoc with SW-SPST from Miscellaneous Devices.IntLib
