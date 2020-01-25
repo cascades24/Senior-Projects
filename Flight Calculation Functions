@@ -1,0 +1,94 @@
+import numpy as np
+
+def calcRange(tstamp1, tstamp2):
+    # Constants
+    # TODO: check actual speed of light in air, make sure this value of c is correct
+    c =  299792458 # m/s, Speed of light in ?
+    tprocess1 = 0 # s constant, add later after calibration 
+    tprocess2 = 0 # s constant, add later after calibration 
+    
+    # TODO: convert from whatever format timestamps come in to s
+    
+    # Formula to calculate range
+    R = c/2*(tstamp2-tstamp1-tprocess1-tprocess2) #m 
+    
+    return(R)
+    
+def calcHeading(dphi12, dphi13, dphi14):
+    # Constants 
+    f = 3.3e9 # Hz, frequency of signal
+    c = 299792458 # m/s the speed of light
+    lam = c/f # m, wavelength
+    
+    # Antenna Separation distances i.e. s12 is distance between Antennas 1 and 2
+    # TODO: Measure actual antenna distances
+    d12 = 0.045409 # m
+    d13 = 0.045409 # m
+    d14 = 0.045409 # m
+    
+    # Formulas to find Azimuth and Elevation angles
+    psi = np.arctan2(dphi13*d14,(dphi14*d13)) # rad, Azimuth
+    theta = np.arccos(lam*dphi12/(2*np.pi*d12)) # rad, Elevation
+    #theta = np.arctan2(dphi13*d12,(dphi12*d13)) # rad, Azimuth
+    return(psi, theta)
+    
+    
+def calcPosition(R, psi, theta):
+    
+    # Convert from Spherical to cartesian coordinates
+    rvec = [R*np.sin(theta)*np.cos(psi), R*np.sin(theta)*np.sin(psi), R*np.cos(theta)]
+    return(rvec)
+    
+from numpy import linalg as LA # Only need this for taking norm when generating data
+
+# Testing above functions
+#Initializing Antenna positions
+A1 = [0, 0, 0];
+A2 = [0, 0, 0.045409];
+A3 = [0, 0.045409, 0];
+A4 = [0.045409, 0, 0];
+
+psi = 150*np.pi/180         # deg, Azimuth angle
+theta = 120*np.pi/180        # deg, Elvation angle
+R = 100              # m, Distance between sensor origin and beacon origin
+
+# Center of Beacon
+B = [R*np.sin(theta)*np.cos(psi), R*np.sin(theta)*np.sin(psi), R*np.cos(theta)]
+
+# Simulating input data
+# Find the ranges. (Assumed to be known)
+r1 = LA.norm(np.subtract(B,A1))
+r2 = LA.norm(np.subtract(B,A2))
+r3 = LA.norm(np.subtract(B,A3))
+r4 = LA.norm(np.subtract(B,A4))
+    
+# Constants 
+f = 3.3e9               # Hz, frequency of signal
+c = 299792458           # m/s the speed of light
+lam = c/f               # m, wavelength
+dspec = lam/(2*np.pi)   # "specific distance"
+
+# Actual Calculations
+r12 = r1-r2 #distance difference (m)
+r13 = r1-r3
+r14 = r1-r4
+    
+# Phase Difference
+dphi12 = r12/dspec
+dphi13 = r13/dspec
+dphi14 = r14/dspec
+
+# Generating Range 
+tstamp1 = 50 #s 
+tstamp2 = R*2/c + tstamp1 #s
+
+# Actually Testing the Functions
+R_result = calcRange(tstamp1, tstamp2)
+[psi_result, theta_result] = calcHeading(dphi12, dphi13, dphi14)
+print('Initial',R, psi, theta)
+print('Result', R_result, psi_result, theta_result)
+B_result = calcPosition(R_result, psi_result, theta_result)
+print('Initial', B)
+print('Result', B_result)
+Err = LA.norm(np.subtract(B, B_result))
+print('Relative Numerical Error in Position', Err)
