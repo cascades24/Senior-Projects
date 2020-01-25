@@ -1,0 +1,82 @@
+Added Component: Designator=F1(LFUS-263-2_V1)
+Add component (AddParameter): Name = "Ampere Rating"; Value = "0.5 A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.littelfuse.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_263_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Dec-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Littelfuse"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Nominal Voltage Drop"; Value = "0.302 mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin Axial Lead, Dia 3.94 mm, Body Length 7.11 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "263-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "0263.500WRT1L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temp. Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Typical Cold Resistance"; Value = "0.332 Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "250 V"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC1005X40X25ML05T05)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW04020000Z0ED"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW4(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Component: Designator=SW5(418121160801)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4181211608xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "418121160801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "418121160801"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=NetF1_1 Pin=F1-1
+Added Pin To Net: NetName=NetF1_2 Pin=F1-2
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=5V Pin=R1-1
+Added Pin To Net: NetName=NetF1_2 Pin=R1-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NetF1_1 Pin=SW1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=SW1-2
+Added Pin To Net: NetName=NetF2_1 Pin=SW2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=SW2-2
+Added Pin To Net: NetName=NetF4_1 Pin=SW4-1
+Added Pin To Net: NetName=NetJ4_1 Pin=SW4-2
+Added Pin To Net: NetName=NetF1_2 Pin=SW5-1
+Added Pin To Net: NetName=NetJ5_1 Pin=SW5-2
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component F1 0263.500WRT1L
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R1 CRCW04020000Z0ED
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW1 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW2 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW4 418121160801
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component SW5 418121160801
+Added Room: Name=SeniorDesign_PowerBoard_Rev3

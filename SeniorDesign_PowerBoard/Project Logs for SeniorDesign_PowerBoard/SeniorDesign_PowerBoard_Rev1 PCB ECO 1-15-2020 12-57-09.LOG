@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetF1_2 Pin=R1-2
+Removed Member From Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=R1
+Added Pin To Net: NetName=NetF1_2 Pin=C1-2
+Added Pin To Net: NetName=NetF1_2 Pin=C2-2
+Added Pin To Net: NetName=NetF1_2 Pin=U1-9
+Change Net Name : Old Net Name=NetF1_2 New Net Name=5V

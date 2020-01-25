@@ -1,0 +1,5 @@
+Added Differential Pair: Name=D
+Added Differential Pair: Name=SSTX
+Added Room: Name=SeniorDesign_PowerBoard_Rev3
+Added Member To Class: ClassName=USB_DIFF_PAIR Member=D
+Added Member To Class: ClassName=USB_DIFF_PAIR Member=SSTX
