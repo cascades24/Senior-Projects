@@ -7,38 +7,54 @@ import matplotlib.pyplot as plt
 import yaml
 
 def main():
-	#dynamics = sys.argv[1] #Next semester AKA deployment
-	#with open(dynamics, 'r') as fp:
-	#	dynamics = yaml.load(fp)
+	dynamics = sys.argv[1]
 
-	#x = dynamics['initial_state']
-	#t = dynamics['timestep']
 
-	a = np.loadtxt('stationary.txt', delimiter=',') #x,y,z
+	a = np.loadtxt(dynamics, delimiter=',') #x,y,z
 	#t = np.loadtxt('timestamp.txt', delimiter=', ')
 	t = np.linspace(0,8,115)
-	w_noise = np.random.rand(1,6)*0.1
-	m_noise = np.random.rand(1,6)*0.1
 	ts = t[1]
 	position = np.array(a[0,:]*ts*ts)
 	velocity = np.array(a[0,:]*ts)
-	#B = [0.1 , 0 , 0 , 0]
-	x = [0,0,0,0,0,0]
-	P = np.eye(6)*np.random.rand(1,1)*100 #Initial uncertainty
-	A = np.array([[1, 0, 0, ts, 0, 0],
-                 [0, 1, 0, 0, ts, 0],
-                 [0, 0, 1, 0, 0, ts],
+	
+
+
+	x0 = [0,0,0,0,0,0]
+	x = np.zeros((len(t),6))
+	x[0,:] = x0
+	P = np.zeros((len(t),6,6))
+	P[0,:,:] = np.eye(6)*np.random.rand(1,1)*300 #Initial uncertainty
+
+	dt = t[0] # discrete
+
+	A = np.array([[1, 0, 0, dt, 0, 0],
+                 [0, 1, 0, 0, dt, 0],
+                 [0, 0, 1, 0, 0, dt],
                  [0, 0, 0, 1, 0, 0],
                  [0, 0, 0, 0, 1, 0],
                  [0, 0, 0, 0, 0, 1]])
-	Q = np.eye(6)*0.75 #actuator type uncertainy 1%
+	Q = np.eye(6)*2.75 #actuator type uncertainy 1%
 
 
 	H = np.eye(6)
 
-	R = np.eye(6)*100 
+	R = np.array([[100, 0, 0, 0, 0, 0],
+                 [0, 100, 0, 0, 0, 0],
+                 [0, 0, 100, 0, 0, 0],
+                 [0, 0, 0, 400, 0, 0],
+                 [0, 0, 0, 0, 400, 0],
+                 [0, 0, 0, 0, 0, 400]])
 
-	pose, P = kf(x,t,P,A,Q,H,R,a,w_noise,m_noise)
+	if dynamics == 'stationary.txt':
+		for k in range(0,len(t)-1):
+			x[k+1], P[k+1] = linear_kf_stationary(k, a[k+1],t[k], x[k], P[k], a[k], A,Q,H,R)
+	else: 
+		for k in range(0,len(t)-1):
+			x[k+1], P[k+1] = linear_kf_motion(k, a[k+1],t[k], x[k], P[k], a[k], A,Q,H,R)
+	
+	plot(x,P,t,a)
+
+def plot(pose, P,t,a):
 
 	stdx = np.sqrt(P[:,0,0])
 	stdy = np.sqrt(P[:,1,1])
@@ -47,12 +63,17 @@ def main():
 
 
 	fig, axs = plt.subplots(2, 2)
-	fig.suptitle("Kalman Filtered data for Beacon at (10,10,10)", fontsize=34)
+	fig.suptitle("Kalman Filtered data for Beacon in cluster motion", fontsize=34)
 	#fig.legend('x', 'y', 'z')
 	#Truth data
-	truth = axs[0,0].hlines(10,0,8, linewidth = 2,linestyle = '--', color='black')
-	axs[0,1].hlines(10,0,8, linewidth = 2,linestyle = '--', color='black')
-	axs[1,0].hlines(10,0,8, linewidth = 2,linestyle = '--', color='black')
+	y = np.zeros((len(t),1))
+	z = np.zeros((len(t),1))
+	for i in range(0,len(t)):
+		y[i] = 10 +0.1*i
+		z[i] = 10 -0.1*i
+	axs[0,0].plot(t,y, linewidth = 2,linestyle = '--', color='black')
+	axs[0,1].plot(t,z, linewidth = 2,linestyle = '--', color='black')
+	truth = axs[1,0].hlines(10,0,8, linewidth = 2,linestyle = '--', color='black')
 
 
 
@@ -101,40 +122,50 @@ def main():
 	plt.show()
 
 
+def linear_kf_motion(k, a,t, x, P, prev_z, A, Q ,H ,R): 	
 
-def kf(xp,t,Pp,A,Q,H,R,a, w,m): 
-	dt = t[1] # discrete
-	x = np.zeros((len(t),6))
-	x[0,:] = xp
-	P = np.zeros((len(t),6,6))
-	P[0] = Pp
+	#Predict
+	xkp = np.dot(A,(x)) 
 
-	for k in range(0,len(t)-1):
-		#Predict
-		xkp = np.dot(A,(x[k])) 
+	pkp = np.dot(A,np.dot(P,np.transpose(A))) + Q
 
-		pkp = np.dot(A,np.dot(P[k],np.transpose(A))) + Q
-
-		#Correct
-		K = np.dot(np.dot(pkp, np.transpose(H)), np.linalg.inv(np.dot(np.dot(H,pkp),np.transpose(H))+ R))
+	#Correct
+	K = np.dot(np.dot(pkp, np.transpose(H)), np.linalg.inv(np.dot(np.dot(H,pkp),np.transpose(H))+ R))
 
 
-		'''try:
-			Vx = (a[k+1][0] - a[k][0])/dt 
-			Vy = (a[k+1][1] - a[k][1])/dt 
-			Vz = (a[k+1][2] - a[k][2])/dt
-		except:
-			Vx = 0
-			Vy = 0
-			Vz = 0 
-		z = [a[k+1,0],a[k+1,1],a[k+1,2],Vx, Vy, Vz]'''
+	if t != 0:
+		Vx = (a[0] - prev_z[0])/t
+		Vy = (a[1] - prev_z[1])/t
+		Vz = (a[2] - prev_z[2])/t
+	else:
+		Vx = 0
+		Vy = 0
+		Vz = 0 
 
-		z = [a[k+1,0],a[k+1,1],a[k+1,2],0,0,0]
+	z = [a[0],a[1],a[2],Vx, Vy, Vz]
+	
+	x = xkp + np.dot(K,(z-np.dot(H,xkp))) 
+
+	P = np.dot((np.eye(6) - np.dot(K,H)),pkp)
+		
+	return x, P
 
 
-		x[k+1] = xkp + np.dot(K,(z-np.dot(H,xkp))) 
+def linear_kf_stationary(k, data,t, x, P, prev_z, A, Q ,H ,R): 	
 
-		P[k+1] = np.dot((np.eye(6) - np.dot(K,H)),pkp)
+	#Predict
+	xkp = np.dot(A,(x)) 
+
+	pkp = np.dot(A,np.dot(P,np.transpose(A))) + Q
+
+	#Correct
+	K = np.dot(np.dot(pkp, np.transpose(H)), np.linalg.inv(np.dot(np.dot(H,pkp),np.transpose(H))+ R))
+
+	z = [a[0],a[1],a[2],0,0,0]
+
+	x = xkp + np.dot(K,(z-np.dot(H,xkp))) 
+
+	P = np.dot((np.eye(6) - np.dot(K,H)),pkp)
 		
 	return x, P
 
