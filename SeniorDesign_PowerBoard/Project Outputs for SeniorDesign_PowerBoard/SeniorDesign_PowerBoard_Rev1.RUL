@@ -1,0 +1,9 @@
+DRC Rules Export File for PCB: C:\Users\Admin\Desktop\Git Repositories\Senior-Projects\SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.PcbDoc
+RuleKind=Width|RuleName=C_GND|Scope=Board|Minimum=30.00
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=28V_Width|Scope=Board|Minimum=40.00
+RuleKind=Width|RuleName=5V_Width|Scope=Board|Minimum=30.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
