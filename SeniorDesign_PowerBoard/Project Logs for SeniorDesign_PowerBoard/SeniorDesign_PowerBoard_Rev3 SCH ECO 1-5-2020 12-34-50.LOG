@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=J1 Old Footprint=614104190121 New Footprint=692121330100
+Change Component Comment: Designator=F2 Old Comment=0.5 A New Comment=Fuse 1
+Change Component Comment: Designator=F3 Old Comment=0.5 A New Comment=Fuse 1
+Change Component Comment: Designator=F4 Old Comment=0.5 A New Comment=Fuse 1
+Change Component Comment: Designator=R2 Old Comment=0 | 8 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R1 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R3 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R4 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R5 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R6 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R7 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=R8 Old Comment=150 Ohm New Comment=CRCW0402150RFKED
+Change Component Comment: Designator=J1 Old Comment=614104190121 New Comment=692121330100
+Change Component Comment: Designator=J2 Old Comment=692121330100 New Comment=RPi

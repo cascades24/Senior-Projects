@@ -1,0 +1,9 @@
+initial_state:
+  x: 0
+  y: 0
+  z: 0
+  Vx: 0
+  Vy: 0
+  Vz: 0
+
+timestep: 0.005

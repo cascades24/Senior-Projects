@@ -1,0 +1,17 @@
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component C3 GRM31CR71H475KA12L
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component D1 HSMH-C150
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component D3 HSMG-C150
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component D7 HSMG-C150
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component J6 692121330100
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R2 CRCW0402150RFKED
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R5 ERJ-8ENF1501V
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R6 CRCW0402150RFKED
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R7 CRCW0402150RFKED
+Added Member To Class: ClassName=SeniorDesign_PowerBoard_Rev3 Member=Component R9 CRCW0402150RFKED
+Added Room: Name=SeniorDesign_PowerBoard_Rev3

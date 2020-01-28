@@ -1,0 +1,20 @@
+Change Net Name : Old Net Name=D_N New Net Name=D2_N
+Change Net Name : Old Net Name=D_P New Net Name=D2_P
+Change Net Name : Old Net Name=NetJ4_2 New Net Name=D4_N
+Change Net Name : Old Net Name=NetJ4_3 New Net Name=D4_P
+Change Net Name : Old Net Name=NetJ4_5 New Net Name=SSRX4_N
+Change Net Name : Old Net Name=NetJ4_6 New Net Name=SSRX4_P
+Change Net Name : Old Net Name=NetJ4_8 New Net Name=SSTX4_N
+Change Net Name : Old Net Name=NetJ4_9 New Net Name=SSTX4_P
+Change Net Name : Old Net Name=SSRX_N New Net Name=SSRX2_N
+Change Net Name : Old Net Name=SSRX_P New Net Name=SSRX2_P
+Change Net Name : Old Net Name=SSTX_N New Net Name=SSTX2_N
+Change Net Name : Old Net Name=SSTX_P New Net Name=SSTX2_P
+Added Differential Pair: Name=D2
+Added Differential Pair: Name=D4
+Added Differential Pair: Name=SSRX2
+Added Differential Pair: Name=SSRX4
+Added Differential Pair: Name=SSTX2
+Added Differential Pair: Name=SSTX4
+Added Room: Name=SeniorDesign_PowerBoard_Rev3
+Added Class: Name=USB_DIFF_PAIR
