@@ -1,0 +1,74 @@
+import numpy as np
+
+# IMPORT DATA FROM SDR HERE
+
+
+# FUNCTIONS
+def defineKnowns()
+	
+	#fix this once SDR output known
+	tstamp1 = 0
+	tstamp2 = 1
+	
+	#fix this too
+	dphi12 = .1
+	dphi13 = .1
+	dphi14 = .1
+
+	return(tstamp1,tstamp2,dphi12,dphi13,dphi14)
+
+
+def calcRange(tstamp1, tstamp2):
+    # Constants
+    # TODO: check actual speed of light in air, make sure this value of c is correct
+    c =  299792458 # m/s, Speed of light in ?
+    tprocess1 = 0 # s constant, add later after calibration 
+    tprocess2 = 0 # s constant, add later after calibration 
+    
+    # TODO: convert from whatever format timestamps come in to s
+    
+    # Formula to calculate range
+    R = c/2*(tstamp2-tstamp1-tprocess1-tprocess2) #m 
+    
+    return(R)
+    
+
+def calcHeading(dphi12, dphi13, dphi14):
+    # Constants 
+    f = 3.3e9 # Hz, frequency of signal
+    c = 299792458 # m/s the speed of light
+    lam = c/f # m, wavelength
+    
+    # Antenna Separation distances i.e. s12 is distance between Antennas 1 and 2
+    # TODO: Measure actual antenna distances
+    d12 = 0.045409 # m
+    d13 = 0.045409 # m
+    d14 = 0.045409 # m
+    
+    # Formulas to find Azimuth and Elevation angles
+    psi = np.arctan2(dphi13*d14,(dphi14*d13)) # rad, Azimuth
+    theta = np.arccos(lam*dphi12/(2*np.pi*d12)) # rad, Elevation
+    #theta = np.arctan2(dphi13*d12,(dphi12*d13)) # rad, Azimuth
+    return(psi, theta)
+    
+    
+def calcPosition(R, psi, theta):
+    
+    # Convert from Spherical to cartesian coordinates
+    rvec = [R*np.sin(theta)*np.cos(psi), R*np.sin(theta)*np.sin(psi), R*np.cos(theta)]
+    return(rvec)
+
+
+
+# CALCULATIONS
+defineKnowns(SDRdata)
+calcRange(tstamp1, tstamp2)
+calcHeading(dphi12, dphi13, dphi14)
+calcPosition(R, psi, theta)
+
+
+
+
+# TELL SENSOR TO SEND OUT PROBING SIGNAL HERE
+
+
