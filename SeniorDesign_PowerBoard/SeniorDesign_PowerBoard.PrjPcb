@@ -195,50 +195,26 @@ DocumentPath=Project Outputs for SeniorDesign_PowerBoard\Design Rule Check - Sen
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.EXTREP
+DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GBL
+DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GBO
+DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GP1
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GP2
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument11]
 DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.REP
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for SeniorDesign_PowerBoard\SeniorDesign_PowerBoard_Rev1.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument7]
 DocumentPath=SeniorDesign_PowerBoard_Rev1 1-15-2020 23-21-26.WAS
 DItemRevisionGUID=
 
@@ -510,6 +486,10 @@ OutputName8=NC Drill Files
 OutputDocumentPath8=
 OutputVariantName8=
 OutputDefault8=0
+Configuration8_Name1=ForceUpdateSettings
+Configuration8_Item1=False
+Configuration8_Name2=OutputConfigurationParameter1
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|NumberOfDecimals=5|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressTrailingZeroes
 OutputType9=IPC2581
 OutputName9=IPC-2581 Files
 OutputDocumentPath9=
@@ -534,7 +514,7 @@ OutputDefault12=0
 Configuration12_Name1=ForceUpdateSettings
 Configuration12_Item1=False
 Configuration12_Name2=OutputConfigurationParameter1
-Configuration12_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973834~1,16777217~1,16842753~1,16842754~1,16842751~1,16973835~1,16973831~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+Configuration12_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842754~1,16842751~1,16973835~1,16973833~1,16973831~1,16908290~1|PlotDrillDrawingLayerPair0_Backdrill=False|PlotDrillDrawingLayerPair0_DrillType=Regular|PlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|PlotDrillDrawingLayerPair0_LowLayer=Top Layer|PlotDrillGuideLayerPair0_Backdrill=False|PlotDrillGuideLayerPair0_DrillType=Regular|PlotDrillGuideLayerPair0_HighLayer=Bottom Layer|PlotDrillGuideLayerPair0_LowLayer=Top Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
 
 [OutputGroup6]
 Name=Report Outputs
