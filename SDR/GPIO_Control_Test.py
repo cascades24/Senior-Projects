@@ -11,12 +11,12 @@
 import RPi.GPIO as GPIO
 import time
 
-for i in range(1,3):
+for config in range(1,4):
 
     GPIO.setmode(GPIO.BOARD)
-    PinV1 = 'GPIO17'
-    PinV2 = 'GPIO27'
-    PinV3 = 'GPIO22'
+    PinV1 = 11
+    PinV2 = 13
+    PinV3 = 15
 
     GPIO.setup([PinA,PinB,PinC], GPIO.OUT)
 
